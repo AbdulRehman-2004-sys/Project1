@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+    font-family: QuickSand;
+    src: url("./assets/Quicksand-SemiBold.ttf");
+}
+
+#card
+{
+    box-shadow: 1px 1px 5px rgb(115, 113, 113);
+}
+#card_btn
+{
+    display: flex;
+    align-items: center;
+    padding: 1vw 2vw;
+    width: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 1s;
+}
+#card_btn h2
+{
+    opacity: 0;
+    transition: all 0.5s ;
+    transition-delay: 0.3s;
+}
+#card_btn:hover
+{
+    width: 10vw;
+}
+#card_btn:hover h2
+{
+    opacity: 1;
+}
+#ball
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s;
+}
