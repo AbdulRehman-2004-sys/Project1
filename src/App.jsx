@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Card_main from './components/Card_main'
-import FetchData from './components/FetchData'
-import Page1 from './Page/Page1'
+
+import Contact from './Page/Contact'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Page/Home'
 
 function App() {
   const handleMouse=(e)=>
@@ -14,11 +14,15 @@ function App() {
   window.addEventListener("mousemove",handleMouse)
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <Page1/>
-      <FetchData/>
+      
 
+      <BrowserRouter>
+      <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

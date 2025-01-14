@@ -2,13 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 @font-face {
-    font-family: QuickSand;
-    src: url("./assets/Quicksand-SemiBold.ttf");
+    font-family: font1;
+    src: url("assets/font1.woff2");
+}
+@font-face {
+    font-family: font2;
+    src: url("assets/font2.woff2");
+}
+@font-face {
+    font-family: font3;
+    src: url("assets/font3.woff2");
 }
 
+@font-face {
+    font-family: font4;
+    src: url("assets/font4.woff2");
+}
+@font-face {
+    font-family: font5;
+    src: url("assets/font5.woff2");
+}
+@font-face {
+    font-family: font6;
+    src: url("assets/font6.woff2");
+}
+@font-face {
+    font-family: font7;
+    src: url("assets/font7.woff2");
+}
+@font-face {
+    font-family: quicksand;
+    src: url("assets/Quicksand-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    background-color: #F9FAFF;
+
+}
+body
+{
+    height: 100vh;
+
+}
 #card
 {
     box-shadow: 1px 1px 5px rgb(115, 113, 113);
@@ -45,3 +90,58 @@
     transform: translate(-50%,-50%);
     transition: all 0.3s;
 }
+
+
+/* Contacts */
+.line-box
+{
+    cursor: pointer;
+}
+.underline
+{
+    transition: 0.3s ease-in;
+}
+.line-box:hover .underline
+{
+    scale: 0;
+}
+.line-box:hover h2
+{
+    color: black;
+}
+.contact .form .right form .input-container
+{
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.contact .form .right form .input-container::before
+{
+    content: '';
+    position: absolute;
+    top: 99%;
+    left: -100%;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: 0.5s;
+}
+.contact .form .right form .input-container:hover::before
+{
+    left: 0;
+}
+.contact .form .right form .input-container input:focus
+{
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.contact .form .right form .input-container input::placeholder
+{
+    color: black;
+}
+
+/* .ball
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
